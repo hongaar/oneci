@@ -63,5 +63,5 @@ EXAMPLE
   $ cat "{}" | openci validate
 ```
 
-_See code: [src\commands\validate.ts](https://github.com/exivity/openci/blob/v0.0.0/src\commands\validate.ts)_
+_See code: [lib\commands\validate.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\validate.js)_
 <!-- commandsstop -->

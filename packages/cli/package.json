@@ -11,23 +11,15 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
     "@openci/api": "*",
-    "tslib": "^1"
+    "get-stdin": "^7.0.0",
+    "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
-    "@oclif/test": "^1",
-    "@oclif/tslint": "^3",
-    "@types/chai": "^4",
-    "@types/mocha": "^5",
-    "@types/node": "^10",
-    "chai": "^4",
+    "@types/js-yaml": "^3.12.1",
     "globby": "^8",
-    "mocha": "^5",
-    "nyc": "^13",
     "rimraf": "^2.6.3",
-    "ts-node": "^7",
-    "tslint": "^5",
-    "typescript": "^3.2"
+    "ts-node": "^7"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -54,10 +46,11 @@
   "repository": "exivity/openci",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
-    "posttest": "tslint -p test -t stylish",
-    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "yarn build",
     "start": "node ./bin/run",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "jest --coverage",
+    "build": "rimraf lib && tsc && oclif-dev manifest && oclif-dev readme",
     "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts"

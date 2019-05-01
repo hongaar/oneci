@@ -1,12 +1,35 @@
 import { Command, flags } from '@oclif/command'
 import { validate } from '@openci/api'
+import * as fs from 'fs'
+import * as getStdin from 'get-stdin'
+import * as yaml from 'js-yaml'
+import * as path from 'path'
 
-async function read(stream: any) {
-  let buffer = Buffer.alloc(0);
-  for await (const chunk of stream) {
-    buffer = Buffer.concat([buffer, chunk]);
+function getFileContents (fileName?: string) {
+  let filePath
+  if (fileName) {
+    filePath = path.resolve(process.cwd(), fileName)
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File ${fileName} does not seem to exist`)
+    }
+  } else {
+    // @todo iterate parent directories
+    if (fs.existsSync('.openci.json')) {
+      filePath = path.join(process.cwd(), '.openci.json')
+    } else if (fs.existsSync('.openci.yaml')) {
+      filePath = path.join(process.cwd(), '.openci.yaml')
+    } else if (fs.existsSync('.openci.yml')) {
+      filePath = path.join(process.cwd(), '.openci.yml')
+    } else {
+      throw new Error('Could not detect an openci config file')
+    }
   }
-  return buffer.toString('utf8');
+
+  if (filePath.endsWith('.json')) {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'))
+  } else {
+    return yaml.safeLoad(fs.readFileSync(filePath, 'utf8'))
+  }
 }
 
 export default class Validate extends Command {
@@ -16,32 +39,34 @@ export default class Validate extends Command {
     `$ openci validate
 $ openci validate .openci.json
 $ openci validate .openci.yaml
-$ cat "{}" | openci validate
+$ echo "..." | openci validate
 `
   ]
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: flags.help({ char: 'h' })
   }
 
   static args = [{ name: 'file' }]
 
   async run () {
-    const { args, flags } = this.parse(Validate)
+    const { args } = this.parse(Validate)
 
-    const input = await read(process.stdin)
+    const input = await getStdin()
 
     if (input && args.file) {
-      throw new Error('Both stdin and FILE arg is provided')
+      throw new Error('Both stdin and FILE argument are provided')
     }
 
-    if (input) {
-
-    } else if (args.file) {
-      this.log(`you input --force and --file: ${args.file}`)
-    } else {
-
+    try {
+      if (input) {
+        validate(JSON.parse(input))
+      } else {
+        validate(getFileContents(args.file))
+      }
+    } catch (error) {
+      this.error(error.message)
+      this.exit(1)
     }
-
   }
 }

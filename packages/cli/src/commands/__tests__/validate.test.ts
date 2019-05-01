@@ -1,4 +1,4 @@
-import Validate from '../../commands/validate'
+import Validate from '../validate'
 
 describe('validate command', () => {
   let result: any

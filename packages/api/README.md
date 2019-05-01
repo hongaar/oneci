@@ -9,7 +9,7 @@ npm i @openci/api
 
 ## usage
 
-```
+```js
 import { [Function] } from '@openci/api'
 ```
 
@@ -24,7 +24,7 @@ data is not valid.
 
 #### example
 
-```
+```js
 import { validate } from '@openci/api'
 
 try {

@@ -1,7 +1,6 @@
-@openci/cli
-===========
+# openci cli
 
-[![oclif](https://img.shields.io/badge/♥-exivity-5cccea.svg)](https://exivity.com)
+[![exivity](https://img.shields.io/badge/♥-exivity-5cccea.svg)](https://exivity.com)
 [![Version](https://img.shields.io/npm/v/@openci/cli.svg)](https://npmjs.org/package/@openci/cli)
 [![License](https://img.shields.io/npm/l/@openci/cli.svg)](https://github.com/exivity/openci/blob/master/package.json)
 

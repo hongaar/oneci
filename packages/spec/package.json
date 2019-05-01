@@ -2,5 +2,11 @@
   "name": "@openci/spec",
   "version": "0.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "typescript-json-schema ./src/spec.ts Spec --required --strictNullChecks --out ./lib/spec.schema.json"
+  },
+  "devDependencies": {
+    "typescript-json-schema": "^0.37.0"
+  }
 }

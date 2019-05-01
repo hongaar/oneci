@@ -1,7 +1,22 @@
 {
-  "name": "root",
+  "name": "openci",
   "private": true,
+  "scripts": {
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "release": "lerna publish"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
   "devDependencies": {
-    "lerna": "^3.13.4"
+    "@types/node": "^11.13.8",
+    "lerna": "^3.13.4",
+    "tslint": "^5.16.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.4.5"
   }
 }

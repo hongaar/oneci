@@ -1,6 +1,7 @@
 yarn-debug.log*
 yarn-error.log*
 node_modules/
+coverage/
 
 packages/*/lib/*
 !packages/*/lib/.gitignore

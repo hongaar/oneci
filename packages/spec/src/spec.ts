@@ -6,5 +6,5 @@ export type Job = {
 }
 
 export type Spec = {
-  jobs: Job[]
+  jobs?: Job[]
 }

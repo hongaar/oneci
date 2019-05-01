@@ -10,7 +10,9 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "strict": true,
-    "target": "es2017",
-    "types": ["node"]
-  }
+    "target": "es2017"
+  },
+  "exclude": [
+    "**/*.test.ts"
+  ]
 }

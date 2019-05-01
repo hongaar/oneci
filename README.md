@@ -2,6 +2,8 @@
 
 OpenCI specification &amp; tools (in development)
 
+_help wanted_
+
 ## goal
 
 The goal of this project is to create a vendor agnostic configuration format for CI/CD runners to make it easier for projects to switch platforms, and tooling around it.
@@ -9,8 +11,6 @@ The goal of this project is to create a vendor agnostic configuration format for
 ## spec
 
 The to be developed OpenCI specification would incorporate common features from various CI vendors, like steps, conditions, environments, matrix expansion, deployment, etc.
-
-_help wanted_
 
 ## adapters
 

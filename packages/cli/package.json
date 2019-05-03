@@ -52,6 +52,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build": "rimraf lib && tsc && oclif-dev manifest && oclif-dev readme",
+    "build:watch": "tsc --watch",
     "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts"

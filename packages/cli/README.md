@@ -29,8 +29,35 @@ USAGE
 # Commands
 
 <!-- commands -->
+* [`openci convert [FILE]`](#openci-convert-file)
 * [`openci help [COMMAND]`](#openci-help-command)
 * [`openci validate [FILE]`](#openci-validate-file)
+
+## `openci convert [FILE]`
+
+convert an openci configuration
+
+```
+USAGE
+  $ openci convert [FILE]
+
+ARGUMENTS
+  FILE  if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory
+
+OPTIONS
+  -f, --format=json|yaml  [default: yaml] file format
+  -f, --target=target     (required) config target to convert to
+  -h, --help              show CLI help
+  -o, --out=out           write to file instead of stdout
+
+EXAMPLE
+  $ openci convert --target=travis
+  $ openci convert .openci.json --target=travis --format=json
+  $ openci convert .openci.yaml --target=travis
+  $ echo "..." | openci convert --target=travis --out=.openci.json
+```
+
+_See code: [lib\commands\convert.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\convert.js)_
 
 ## `openci help [COMMAND]`
 
@@ -56,6 +83,9 @@ validate an openci configuration
 ```
 USAGE
   $ openci validate [FILE]
+
+ARGUMENTS
+  FILE  if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory
 
 OPTIONS
   -h, --help  show CLI help

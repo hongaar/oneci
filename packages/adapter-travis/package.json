@@ -13,6 +13,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@openci/adapter-common": "^0.0.0"
+    "@openci/adapter-common": "^0.0.0",
+    "@openci/spec": "^0.0.0"
   }
 }

@@ -1,36 +1,7 @@
 import { Command, flags } from '@oclif/command'
 import { validate } from '@openci/api'
-import * as fs from 'fs'
 import getStdin = require('get-stdin')
-import * as yaml from 'js-yaml'
-import * as path from 'path'
-
-function getFileContents (fileName?: string) {
-  let filePath
-  if (fileName) {
-    filePath = path.resolve(process.cwd(), fileName)
-    if (!fs.existsSync(filePath)) {
-      throw new Error(`File ${fileName} does not seem to exist`)
-    }
-  } else {
-    // @todo iterate parent directories
-    if (fs.existsSync('.openci.json')) {
-      filePath = path.join(process.cwd(), '.openci.json')
-    } else if (fs.existsSync('.openci.yaml')) {
-      filePath = path.join(process.cwd(), '.openci.yaml')
-    } else if (fs.existsSync('.openci.yml')) {
-      filePath = path.join(process.cwd(), '.openci.yml')
-    } else {
-      throw new Error('Could not detect an openci config file')
-    }
-  }
-
-  if (filePath.endsWith('.json')) {
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'))
-  } else {
-    return yaml.safeLoad(fs.readFileSync(filePath, 'utf8'))
-  }
-}
+import { getFileContents } from '../common'
 
 export default class Validate extends Command {
   static description = 'validate an openci configuration'
@@ -47,7 +18,13 @@ $ echo "..." | openci validate
     help: flags.help({ char: 'h' })
   }
 
-  static args = [{ name: 'file' }]
+  static args = [
+    {
+      name: 'file',
+      description:
+        'if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory'
+    }
+  ]
 
   async run () {
     const { args } = this.parse(Validate)

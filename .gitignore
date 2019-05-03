@@ -1,5 +1,4 @@
-yarn-debug.log*
-yarn-error.log*
+*.log*
 node_modules/
 coverage/
 

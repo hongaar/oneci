@@ -1,9 +1,9 @@
 import { Command, flags } from '@oclif/command'
 import { validate } from '@openci/api'
-import * as fs from 'fs'
-import * as getStdin from 'get-stdin'
-import * as yaml from 'js-yaml'
-import * as path from 'path'
+import fs from 'fs'
+import getStdin from 'get-stdin'
+import yaml from 'js-yaml'
+import path from 'path'
 
 function getFileContents (fileName?: string) {
   let filePath

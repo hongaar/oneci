@@ -5,16 +5,14 @@
 [![License](https://img.shields.io/npm/l/@openci/cli.svg)](https://github.com/exivity/openci/blob/master/package.json)
 
 <!-- toc -->
-
-- [openci cli](#openci-cli)
-- [Usage](#usage)
-- [Commands](#commands)
-  <!-- tocstop -->
+* [@openci/cli](#opencicli)
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g @openci/cli
 $ openci COMMAND
@@ -26,15 +24,13 @@ USAGE
   $ openci COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`openci help [COMMAND]`](#openci-help-command)
-- [`openci validate [FILE]`](#openci-validate-file)
+* [`openci help [COMMAND]`](#openci-help-command)
+* [`openci validate [FILE]`](#openci-validate-file)
 
 ## `openci help [COMMAND]`
 
@@ -71,4 +67,5 @@ EXAMPLE
   $ echo "..." | openci validate
 ```
 
+_See code: [lib\commands\validate.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\validate.js)_
 <!-- commandsstop -->

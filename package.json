@@ -5,7 +5,8 @@
     "start": "lerna run --parallel start",
     "test": "lerna run test",
     "test:watch": "lerna run --parallel test:watch",
-    "build": "lerna run build",
+    "build": "yarn build:clean && lerna run build",
+    "build:clean": "rimraf packages/*/lib",
     "build:watch": "lerna run --parallel build:watch",
     "watch": "run-p build:watch test:watch",
     "release": "lerna publish"
@@ -22,6 +23,7 @@
     "jest": "^24.7.1",
     "lerna": "^3.13.4",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-config-standard": "^8.0.1",

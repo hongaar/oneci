@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
     "lint:fix": "tslint 'src/**/*.ts' --fix",
-    "test": "jest --coverage",
+    "test": "jest --coverage --passWithNoTests",
     "test:watch": "jest --watch",
     "build": "tsc",
     "build:watch": "tsc --watch",

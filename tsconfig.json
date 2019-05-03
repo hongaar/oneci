@@ -13,7 +13,5 @@
     "strict": true,
     "target": "es2017"
   },
-  "exclude": [
-    "**/*.test.ts"
-  ]
+  "exclude": ["**/*.test.ts"]
 }

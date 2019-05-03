@@ -1,4 +1,4 @@
-# openci spec
+# @openci/spec
 
 ## top level attributes
 
@@ -13,7 +13,7 @@ Specify one or more jobs to run in sequence. Optionally group in stages, to run 
 ```yaml
 jobs:
   - [Job]
-  - [Job] 
+  - [Job]
 ```
 
 ## type definitions
@@ -54,10 +54,10 @@ One or more commands to execute as part of a job
 
 ```yaml
 # This config defines two jobs, one runs the tests,
-# the other runs two scripts to deploy and ping slack. 
+# the other runs two scripts to deploy and ping slack.
 jobs:
   - script: test.sh
   - script:
-    - deploy.sh
-    - ping-slack.sh
+      - deploy.sh
+      - ping-slack.sh
 ```

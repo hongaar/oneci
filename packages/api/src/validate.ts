@@ -1,4 +1,4 @@
-import schema from '@openci/spec'
+import { schema } from '@openci/spec'
 import Ajv from 'ajv'
 
 export class ValidationError extends Error {}

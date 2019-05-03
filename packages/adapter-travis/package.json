@@ -1,5 +1,5 @@
 {
-  "name": "@openci/api",
+  "name": "@openci/adapter-travis",
   "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -13,7 +13,6 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@openci/spec": "^0.0.0",
-    "ajv": "^6.10.0"
+    "@openci/adapter-common": "*"
   }
 }

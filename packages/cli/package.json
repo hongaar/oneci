@@ -50,6 +50,7 @@
     "prepack": "yarn build",
     "start": "node ./bin/run",
     "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "build": "rimraf lib && tsc && oclif-dev manifest && oclif-dev readme",
     "version": "oclif-dev readme && git add README.md"
   },

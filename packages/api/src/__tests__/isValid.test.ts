@@ -1,15 +1,13 @@
-import { isValid } from '../index'
+import { isValid } from '..'
 // @ts-ignore
 import invalid from './fixtures/invalid.openci.json'
 // @ts-ignore
 import valid from './fixtures/valid.openci.json'
 
-test('isValid should return true for a valid object', () => {
-  const output = isValid(valid)
-  expect(output).toBeTruthy()
+it('should return true for a valid object', () => {
+  expect(isValid(valid)).toEqual(true)
 })
 
-test('isValid should return false for an invalid object', () => {
-  const output = isValid(invalid)
-  expect(output).toBeFalsy()
+it('should return false for an invalid object', () => {
+  expect(isValid(invalid)).toEqual(false)
 })

@@ -1,10 +1,14 @@
 {
   "name": "@openci/spec",
   "version": "0.0.0",
-  "main": "lib/spec.schema.json",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "typescript-json-schema ./src/spec.ts Spec --required --strictNullChecks --noExtraProps --out ./lib/spec.schema.json"
+    "build": "yarn build:ts && yarn build:schema",
+    "build:ts": "tsc",
+    "build:schema": "typescript-json-schema ./src/spec.ts Spec --required --strictNullChecks --noExtraProps --out ./lib/spec.schema.json",
+    "build:watch": "tsc --watch",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "typescript-json-schema": "^0.37.0"

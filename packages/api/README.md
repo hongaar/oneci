@@ -1,4 +1,4 @@
-# openci api
+# @openci/api
 
 ## installation
 
@@ -25,12 +25,12 @@ data is not valid.
 #### example
 
 ```js
-import { validate } from '@openci/api'
+import { validate } from "@openci/api";
 
 try {
-  validate({ foo: bar })
+  validate({ foo: bar });
 } catch (error) {
-  console.error(error.message)
+  console.error(error.message);
   // --> "data.jobs should be array"
 }
 ```

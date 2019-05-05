@@ -26,6 +26,6 @@ describe('validate method', () => {
 describe('convert method', () => {
   it('should return openci config', async () => {
     const adapter = new TravisAdapter()
-    expect(adapter.convert(exampleOpenciConfig)).toBeDefined()
+    expect(adapter.convert(exampleOpenciConfig)).toBe(exampleTravisConfig)
   })
 })

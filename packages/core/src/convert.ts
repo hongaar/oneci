@@ -10,5 +10,8 @@ export function convert (data: Spec, format: typeof Adapter | string) {
     adapter = new format()
   }
 
-  return adapter.convert(data)
+  const converted = adapter.convert(data)
+  const stripped = JSON.parse(JSON.stringify(converted))
+
+  return stripped
 }

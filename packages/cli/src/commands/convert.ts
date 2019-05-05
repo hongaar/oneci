@@ -78,8 +78,7 @@ $ echo "..." | openci convert --target=travis --out=.travis.json
       ) {
         formatted = JSON.stringify(output, undefined, 2)
       } else {
-        const stripped = JSON.parse(JSON.stringify(output))
-        formatted = yaml.safeDump(stripped, { indent: 2 })
+        formatted = yaml.safeDump(output, { indent: 2 })
       }
 
       if (flags.out) {

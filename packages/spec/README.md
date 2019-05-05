@@ -2,6 +2,31 @@
 
 ## top level attributes
 
+### `image`
+
+_`Image`_
+
+Docker image to use for this pipeline.
+
+#### examples
+
+```yaml
+image: node
+```
+
+### `always`
+
+_`Script`_
+
+Execute these scripts for all jobs (before job specific scripts).
+
+#### examples
+
+```yaml
+always:
+  - yarn
+```
+
 ### `jobs`
 
 _`array<Job>`_
@@ -18,15 +43,22 @@ jobs:
 
 ## type definitions
 
+### `Image`
+
+_`string`_
+
+Docker image.
+
 ### `Job`
 
 _`object`_
 
-#### attributes
+#### properties
 
-- name _`string` (optional)_: descriptive name for the job, no functional effect
-- group _`string` (optional)_: run all jobs in this group in parallel
-- script _`Script` (optional)_: execute these scripts as part of the job
+- name _`string` (optional)_: Descriptive name for the job, no functional effect.
+- group _`string` (optional)_: Run all jobs in this group in parallel.
+- image _`string` (optional)_: Override pipeline image for this job.
+- script _`Script` (optional)_: Execute these scripts as part of the job.
 
 #### examples
 
@@ -41,12 +73,13 @@ jobs:
     group: test
     script: [Script]
   - group: deploy
+    image: mesosphere/aws-cli
     script: [Script]
 ```
 
 ## `Script`
 
-_`string | array<string>`_
+_`array<string>`_
 
 One or more commands to execute as part of a job
 
@@ -56,7 +89,8 @@ One or more commands to execute as part of a job
 # This config defines two jobs, one runs the tests,
 # the other runs two scripts to deploy and ping slack.
 jobs:
-  - script: test.sh
+  - script:
+      - test.sh
   - script:
       - deploy.sh
       - ping-slack.sh

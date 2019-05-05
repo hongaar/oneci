@@ -1,12 +1,10 @@
 {
   "image": "node:latest",
-  "always": {
-    "script": ["yarn"]
-  },
+  "always": ["yarn"],
   "jobs": [
     {
       "group": "test",
-      "script": ["yarn", "yarn build", "yarn test"]
+      "script": ["yarn build", "yarn test"]
     }
   ]
 }

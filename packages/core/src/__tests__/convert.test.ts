@@ -9,13 +9,13 @@ class TestAdapter extends Adapter {
   }
 }
 
-const source = {
-  source: true
-} as any
-const destination = {
-  destination: true
-}
+it('should convert input with TestAdapter', () => {
+  const source = {
+    source: true
+  } as any
+  const destination = {
+    destination: true
+  }
 
-it('should convert spec to travis format', () => {
   expect(convert(source, TestAdapter)).toEqual(destination)
 })

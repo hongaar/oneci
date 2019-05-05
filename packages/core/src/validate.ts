@@ -1,13 +1,22 @@
 import { schema } from '@openci/spec'
 import Ajv from 'ajv'
+import betterAjvErrors from 'better-ajv-errors'
 
 export class ValidationError extends Error {}
 
 export function validate (data: any) {
-  const ajv = new Ajv({ allErrors: true })
-  const valid = ajv.validate(schema, data)
+  const ajv = new Ajv({
+    allErrors: true,
+    jsonPointers: true
+  })
+  const validate = ajv.compile(schema)
+  const valid = validate(data)
 
   if (!valid) {
-    throw new ValidationError(ajv.errorsText())
+    const errors = betterAjvErrors(schema, data, validate.errors, {
+      indent: 2
+    })
+    console.error(errors)
+    throw new ValidationError(ajv.errorsText(validate.errors))
   }
 }

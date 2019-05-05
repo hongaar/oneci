@@ -13,8 +13,8 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@openci/spec": "^0.0.0",
     "@openci/adapter-common": "^0.0.0",
-    "ajv": "^6.10.0"
+    "ajv": "^6.10.0",
+    "better-ajv-errors": "^0.6.4"
   }
 }

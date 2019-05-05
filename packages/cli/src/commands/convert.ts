@@ -1,5 +1,5 @@
 import { Command, flags } from '@oclif/command'
-import { convert } from '@openci/core'
+import { validate, convert } from '@openci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 import * as yaml from 'js-yaml'
@@ -60,12 +60,16 @@ $ echo "..." | openci convert --target=travis --out=.travis.json
     }
 
     try {
-      let output
+      let spec
       if (input) {
-        output = convert(JSON.parse(input), flags.target)
+        spec = JSON.parse(input)
       } else {
-        output = convert(getFileContents(args.file), flags.target)
+        spec = getFileContents(args.file)
       }
+
+      validate(spec)
+
+      const output = convert(spec, flags.target)
 
       let formatted
       if (

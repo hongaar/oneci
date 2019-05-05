@@ -1,5 +1,5 @@
 import { Command, flags } from '@oclif/command'
-import { validate } from '@openci/api'
+import { validate } from '@openci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 

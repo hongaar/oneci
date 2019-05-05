@@ -1,5 +1,5 @@
 {
-  "name": "@openci/api",
+  "name": "@openci/core",
   "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",

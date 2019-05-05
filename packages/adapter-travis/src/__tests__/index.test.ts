@@ -1,4 +1,4 @@
-import { TravisAdapter } from '..'
+import TravisAdapter from '..'
 // @ts-ignore
 import validConfig from './fixtures/valid.travis.json'
 // @ts-ignore

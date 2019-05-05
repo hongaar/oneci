@@ -21,10 +21,10 @@ Various adapters could be developed for conversion to/from the OpenCI spec to pl
 In order to help adopt the specs, various tools could be created alongside the spec in a monorepo containing these packages:
 
 - spec: the spec itself as markdown doc and json-schema (or typescript or some other convenient interface)
-- adapter-*: adapters for various ci platforms
-- api: functions to validate and convert a configuration object into other formats
-- cli: wrapper around the api for command line usage
-- web: wrapper around the api for web usage
+- adapter-\*: adapters for various ci platforms
+- core: functions to validate and convert a configuration object into other formats
+- cli: wrapper around the core for command line usage
+- web: wrapper around the core for web usage
 
 ## list of ci platforms
 

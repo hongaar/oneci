@@ -1,10 +1,9 @@
 import { Command, flags } from '@oclif/command'
-import { convert } from '@openci/api'
+import { convert } from '@openci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 import * as yaml from 'js-yaml'
 import * as fs from 'fs'
-import * as path from 'path'
 
 export default class Convert extends Command {
   static description = 'convert an openci configuration'

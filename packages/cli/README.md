@@ -45,16 +45,16 @@ ARGUMENTS
   FILE  if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory
 
 OPTIONS
+  -a, --append            append to existing file if --out is given
   -f, --format=json|yaml  [default: yaml] file format
-  -f, --target=target     (required) config target to convert to
   -h, --help              show CLI help
   -o, --out=out           write to file instead of stdout
+  -t, --target=target     (required) config target to convert to
 
 EXAMPLE
   $ openci convert --target=travis
-  $ openci convert .openci.json --target=travis --format=json
-  $ openci convert .openci.yaml --target=travis
-  $ echo "..." | openci convert --target=travis --out=.openci.json
+  $ openci convert my.openci.yaml --target=travis --format=json
+  $ echo "..." | openci convert --target=travis --out=.travis.json
 ```
 
 _See code: [lib\commands\convert.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\convert.js)_

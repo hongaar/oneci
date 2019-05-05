@@ -1,5 +1,7 @@
 # openci
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 OpenCI specification &amp; tools (in development)
 
 _help wanted_

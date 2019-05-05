@@ -9,7 +9,8 @@
     "build:clean": "rimraf packages/*/lib",
     "build:watch": "lerna run --parallel build:watch",
     "watch": "run-p build:watch test:watch",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "semantic-release": "semantic-release"
   },
   "workspaces": [
     "packages/*"
@@ -27,6 +28,12 @@
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "semantic-release": "^15.13.3"
+  },
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exivity/openci.git"
   }
 }

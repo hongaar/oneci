@@ -1,7 +1,13 @@
+# ide
+.idea
+.vscode
+
+# node
 *.log*
 node_modules/
 coverage/
 
+# artefacts
 packages/*/lib/*
 !packages/*/lib/.gitignore
 

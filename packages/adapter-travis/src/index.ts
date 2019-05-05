@@ -1,6 +1,6 @@
 import { Adapter } from '@openci/adapter-common'
 import { Spec } from '@openci/spec'
-import { TravisSpec } from './spec'
+import { TravisSpec } from './types'
 
 export default class TravisAdapter extends Adapter {
   public schemaUrl = 'http://json.schemastore.org/travis'

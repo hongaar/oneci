@@ -11,16 +11,15 @@ export default class Convert extends Command {
 
   static examples = [
     `$ openci convert --target=travis
-$ openci convert .openci.json --target=travis --format=json
-$ openci convert .openci.yaml --target=travis
-$ echo "..." | openci convert --target=travis --out=.openci.json
+$ openci convert my.openci.yaml --target=travis --format=json
+$ echo "..." | openci convert --target=travis --out=.travis.json
 `
   ]
 
   static flags = {
     help: flags.help({ char: 'h' }),
     target: flags.string({
-      char: 'f',
+      char: 't',
       required: true,
       description: 'config target to convert to'
     }),
@@ -33,6 +32,10 @@ $ echo "..." | openci convert --target=travis --out=.openci.json
       description: 'file format',
       default: 'yaml',
       options: ['json', 'yaml']
+    }),
+    append: flags.boolean({
+      char: 'a',
+      description: 'append to existing file if --out is given'
     })
   }
 
@@ -51,6 +54,10 @@ $ echo "..." | openci convert --target=travis --out=.openci.json
 
     if (input && args.file) {
       throw new Error('Both stdin and FILE argument are provided')
+    }
+
+    if (flags.append && !flags.out) {
+      throw new Error('--out must be used when using --append')
     }
 
     try {

@@ -1,0 +1,9 @@
+{
+  "api": {
+    "Getting started": ["api", "api/api-install", "api/api-examples"],
+    "API": ["api/api-api"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}

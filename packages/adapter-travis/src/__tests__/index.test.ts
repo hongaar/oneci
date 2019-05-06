@@ -4,7 +4,7 @@ import validConfig from './fixtures/valid.travis.json'
 // @ts-ignore
 import exampleTravisConfig from './fixtures/example.travis.json'
 // @ts-ignore
-import exampleOpenciConfig from './fixtures/example.openci.json'
+import exampleOneciConfig from './fixtures/example.oneci.json'
 
 describe('validate method', () => {
   it('should return true given valid data', async () => {
@@ -24,8 +24,8 @@ describe('validate method', () => {
 })
 
 describe('convert method', () => {
-  it('should return openci config', async () => {
+  it('should return oneci config', async () => {
     const adapter = new TravisAdapter()
-    expect(adapter.convert(exampleOpenciConfig)).toBe(exampleTravisConfig)
+    expect(adapter.convert(exampleOneciConfig)).toBe(exampleTravisConfig)
   })
 })

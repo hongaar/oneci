@@ -1,17 +1,17 @@
-# @openci/core
+# @oneci/core
 
 ## installation
 
 ```
-yarn add @openci/core
+yarn add @oneci/core
 // or
-npm i @openci/core
+npm i @oneci/core
 ```
 
 ## usage
 
 ```js
-import { [Function] } from '@openci/core'
+import { [Function] } from '@oneci/core'
 ```
 
 ## functions
@@ -26,7 +26,7 @@ data is not valid.
 #### example
 
 ```js
-import { validate } from "@openci/core";
+import { validate } from "@oneci/core";
 
 try {
   validate({ foo: bar });

@@ -21,7 +21,7 @@ describe('validate command', () => {
       expect('An error to be thrown').toEqual('An error is not thrown')
     } catch (error) {
       expect(error.toString()).toMatch(
-        'Could not detect an openci config file'
+        'Could not detect an oneci config file'
       )
     }
   })

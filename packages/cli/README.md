@@ -1,11 +1,11 @@
-# @openci/cli
+# @oneci/cli
 
 [![exivity](https://img.shields.io/badge/♥-exivity-5cccea.svg)](https://exivity.com)
-[![Version](https://img.shields.io/npm/v/@openci/cli.svg)](https://npmjs.org/package/@openci/cli)
-[![License](https://img.shields.io/npm/l/@openci/cli.svg)](https://github.com/exivity/openci/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@oneci/cli.svg)](https://npmjs.org/package/@oneci/cli)
+[![License](https://img.shields.io/npm/l/@oneci/cli.svg)](https://github.com/exivity/oneci/blob/master/package.json)
 
 <!-- toc -->
-* [@openci/cli](#opencicli)
+* [@oneci/cli](#onecicli)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -14,14 +14,14 @@
 
 <!-- usage -->
 ```sh-session
-$ npm install -g @openci/cli
-$ openci COMMAND
+$ npm install -g @oneci/cli
+$ oneci COMMAND
 running command...
-$ openci (-v|--version|version)
-@openci/cli/0.0.0 win32-x64 node-v10.13.0
-$ openci --help [COMMAND]
+$ oneci (-v|--version|version)
+@oneci/cli/0.0.0 win32-x64 node-v10.13.0
+$ oneci --help [COMMAND]
 USAGE
-  $ openci COMMAND
+  $ oneci COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -29,20 +29,20 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`openci convert [FILE]`](#openci-convert-file)
-* [`openci help [COMMAND]`](#openci-help-command)
-* [`openci validate [FILE]`](#openci-validate-file)
+* [`oneci convert [FILE]`](#oneci-convert-file)
+* [`oneci help [COMMAND]`](#oneci-help-command)
+* [`oneci validate [FILE]`](#oneci-validate-file)
 
-## `openci convert [FILE]`
+## `oneci convert [FILE]`
 
-convert an openci configuration
+convert an oneci configuration
 
 ```
 USAGE
-  $ openci convert [FILE]
+  $ oneci convert [FILE]
 
 ARGUMENTS
-  FILE  if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory
+  FILE  if not provided, will autodetect .oneci.{yml,yaml,json} files in the working directory
 
 OPTIONS
   -a, --append            append to existing file if --out is given
@@ -52,20 +52,20 @@ OPTIONS
   -t, --target=target     (required) config target to convert to
 
 EXAMPLE
-  $ openci convert --target=travis
-  $ openci convert my.openci.yaml --target=travis --format=json
-  $ echo "..." | openci convert --target=travis --out=.travis.json
+  $ oneci convert --target=travis
+  $ oneci convert my.oneci.yaml --target=travis --format=json
+  $ echo "..." | oneci convert --target=travis --out=.travis.json
 ```
 
-_See code: [lib\commands\convert.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\convert.js)_
+_See code: [lib\commands\convert.js](https://github.com/exivity/oneci/blob/v0.0.0/lib\commands\convert.js)_
 
-## `openci help [COMMAND]`
+## `oneci help [COMMAND]`
 
-display help for openci
+display help for oneci
 
 ```
 USAGE
-  $ openci help [COMMAND]
+  $ oneci help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -76,26 +76,26 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src\commands\help.ts)_
 
-## `openci validate [FILE]`
+## `oneci validate [FILE]`
 
-validate an openci configuration
+validate an oneci configuration
 
 ```
 USAGE
-  $ openci validate [FILE]
+  $ oneci validate [FILE]
 
 ARGUMENTS
-  FILE  if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory
+  FILE  if not provided, will autodetect .oneci.{yml,yaml,json} files in the working directory
 
 OPTIONS
   -h, --help  show CLI help
 
 EXAMPLE
-  $ openci validate
-  $ openci validate .openci.json
-  $ openci validate .openci.yaml
-  $ echo "..." | openci validate
+  $ oneci validate
+  $ oneci validate .oneci.json
+  $ oneci validate .oneci.yaml
+  $ echo "..." | oneci validate
 ```
 
-_See code: [lib\commands\validate.js](https://github.com/exivity/openci/blob/v0.0.0/lib\commands\validate.js)_
+_See code: [lib\commands\validate.js](https://github.com/exivity/oneci/blob/v0.0.0/lib\commands\validate.js)_
 <!-- commandsstop -->

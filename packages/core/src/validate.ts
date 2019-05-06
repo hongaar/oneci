@@ -1,4 +1,4 @@
-import { schema } from '@openci/spec'
+import { schema } from '@oneci/spec'
 import Ajv from 'ajv'
 import betterAjvErrors from 'better-ajv-errors'
 

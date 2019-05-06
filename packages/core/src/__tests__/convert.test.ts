@@ -1,5 +1,5 @@
 import { convert } from '..'
-import { Adapter } from '@openci/adapter-common'
+import { Adapter } from '@oneci/adapter-common'
 
 class TestAdapter extends Adapter {
   convert (input: any) {

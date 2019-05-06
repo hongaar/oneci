@@ -11,14 +11,14 @@ export function getFileContents (fileName?: string) {
     }
   } else {
     // @todo iterate parent directories
-    if (fs.existsSync('.openci.json')) {
-      filePath = path.join(process.cwd(), '.openci.json')
-    } else if (fs.existsSync('.openci.yaml')) {
-      filePath = path.join(process.cwd(), '.openci.yaml')
-    } else if (fs.existsSync('.openci.yml')) {
-      filePath = path.join(process.cwd(), '.openci.yml')
+    if (fs.existsSync('.oneci.json')) {
+      filePath = path.join(process.cwd(), '.oneci.json')
+    } else if (fs.existsSync('.oneci.yaml')) {
+      filePath = path.join(process.cwd(), '.oneci.yaml')
+    } else if (fs.existsSync('.oneci.yml')) {
+      filePath = path.join(process.cwd(), '.oneci.yml')
     } else {
-      throw new Error('Could not detect an openci config file')
+      throw new Error('Could not detect an oneci config file')
     }
   }
 

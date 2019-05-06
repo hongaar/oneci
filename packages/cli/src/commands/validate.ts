@@ -1,16 +1,16 @@
 import { Command, flags } from '@oclif/command'
-import { validate } from '@openci/core'
+import { validate } from '@oneci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 
 export default class Validate extends Command {
-  static description = 'validate an openci configuration'
+  static description = 'validate an oneci configuration'
 
   static examples = [
-    `$ openci validate
-$ openci validate .openci.json
-$ openci validate .openci.yaml
-$ echo "..." | openci validate
+    `$ oneci validate
+$ oneci validate .oneci.json
+$ oneci validate .oneci.yaml
+$ echo "..." | oneci validate
 `
   ]
 
@@ -22,7 +22,7 @@ $ echo "..." | openci validate
     {
       name: 'file',
       description:
-        'if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory'
+        'if not provided, will autodetect .oneci.{yml,yaml,json} files in the working directory'
     }
   ]
 

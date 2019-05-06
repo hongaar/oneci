@@ -65,7 +65,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl("spec")}>Read the Specification</Button>
             <Button href={docUrl("try")}>Try online</Button>
-            <Button href="https://github.com/exivity/openci">GitHub</Button>
+            <Button href="https://github.com/exivity/oneci">GitHub</Button>
           </PromoSection>
         </div>
       </SplashContainer>

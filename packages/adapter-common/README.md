@@ -1,1 +1,1 @@
-# @openci/adapter-common
+# @oneci/adapter-common

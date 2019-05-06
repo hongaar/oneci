@@ -1,1 +1,1 @@
-# @openci/adapter-travis
+# @oneci/adapter-travis

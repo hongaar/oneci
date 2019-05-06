@@ -1,16 +1,16 @@
 {
-  "name": "@openci/cli",
+  "name": "@oneci/cli",
   "version": "0.0.0",
   "author": "Joram van den Boezem @hongaar",
   "bin": {
-    "openci": "./bin/run"
+    "oneci": "./bin/run"
   },
-  "bugs": "https://github.com/exivity/openci/issues",
+  "bugs": "https://github.com/exivity/oneci/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
-    "@openci/core": "^0.0.0",
+    "@oneci/core": "^0.0.0",
     "get-stdin": "^7.0.0",
     "js-yaml": "^3.13.1"
   },
@@ -30,7 +30,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/exivity/openci",
+  "homepage": "https://github.com/exivity/oneci",
   "keywords": [
     "oclif"
   ],
@@ -38,12 +38,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "openci",
+    "bin": "oneci",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "exivity/openci",
+  "repository": "exivity/oneci",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "tslint -p . -t stylish",

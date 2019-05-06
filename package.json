@@ -1,5 +1,5 @@
 {
-  "name": "openci",
+  "name": "oneci",
   "private": true,
   "scripts": {
     "start": "lerna run --parallel start",
@@ -35,7 +35,7 @@
   "version": "0.0.0-development",
   "repository": {
     "type": "git",
-    "url": "https://github.com/exivity/openci.git"
+    "url": "https://github.com/exivity/oneci.git"
   },
   "config": {
     "commitizen": {

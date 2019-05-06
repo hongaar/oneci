@@ -1,6 +1,6 @@
 ---
 id: api
-title: An OpenCI programming interface
+title: An OneCI programming interface
 ---
 
-## @openci/core
+## @oneci/core

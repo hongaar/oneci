@@ -1,17 +1,17 @@
 import { Command, flags } from '@oclif/command'
-import { validate, convert } from '@openci/core'
+import { validate, convert } from '@oneci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 import * as yaml from 'js-yaml'
 import * as fs from 'fs'
 
 export default class Convert extends Command {
-  static description = 'convert an openci configuration'
+  static description = 'convert an oneci configuration'
 
   static examples = [
-    `$ openci convert --target=travis
-$ openci convert my.openci.yaml --target=travis --format=json
-$ echo "..." | openci convert --target=travis --out=.travis.json
+    `$ oneci convert --target=travis
+$ oneci convert my.oneci.yaml --target=travis --format=json
+$ echo "..." | oneci convert --target=travis --out=.travis.json
 `
   ]
 
@@ -42,7 +42,7 @@ $ echo "..." | openci convert --target=travis --out=.travis.json
     {
       name: 'file',
       description:
-        'if not provided, will autodetect .openci.{yml,yaml,json} files in the working directory'
+        'if not provided, will autodetect .oneci.{yml,yaml,json} files in the working directory'
     }
   ]
 

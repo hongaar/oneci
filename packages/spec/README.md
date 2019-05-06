@@ -1,4 +1,4 @@
-# @openci/spec
+# @oneci/spec
 
 ## top level attributes
 

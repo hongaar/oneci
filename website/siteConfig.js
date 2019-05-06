@@ -22,16 +22,16 @@ const users = [
 ];
 
 const siteConfig = {
-  title: "OpenCI", // Title for your website.
+  title: "OneCI", // Title for your website.
   tagline: "One CI/CD configuration to rule them all",
-  url: "https://openci.dev", // Your website URL
+  url: "https://oneci.dev", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: "openci",
+  projectName: "oneci",
   organizationName: "exivity",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -101,7 +101,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: "https://github.com/exivity/openci"
+  repoUrl: "https://github.com/exivity/oneci"
 };
 
 module.exports = siteConfig;

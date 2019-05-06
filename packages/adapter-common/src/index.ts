@@ -1,4 +1,4 @@
-import { Spec } from '@openci/spec'
+import { Spec } from '@oneci/spec'
 import got from 'got'
 import Ajv from 'ajv'
 

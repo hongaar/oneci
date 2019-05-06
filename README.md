@@ -1,8 +1,8 @@
-# openci
+# oneci
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-OpenCI specification &amp; tools (in development)
+OneCI specification &amp; tools (in development)
 
 _help wanted_
 
@@ -12,11 +12,11 @@ The goal of this project is to create a vendor agnostic configuration format for
 
 ## spec
 
-The to be developed OpenCI specification would incorporate common features from various CI vendors, like steps, conditions, environments, matrix expansion, deployment, etc.
+The to be developed OneCI specification would incorporate common features from various CI vendors, like steps, conditions, environments, matrix expansion, deployment, etc.
 
 ## adapters
 
-Various adapters could be developed for conversion to/from the OpenCI spec to platform specific formats to make migrations easy.
+Various adapters could be developed for conversion to/from the OneCI spec to platform specific formats to make migrations easy.
 
 ## packages
 

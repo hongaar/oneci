@@ -1,5 +1,5 @@
-import { Adapter } from '@openci/adapter-common'
-import { Spec, Script } from '@openci/spec'
+import { Adapter } from '@oneci/adapter-common'
+import { Spec, Script } from '@oneci/spec'
 import { TravisSpec } from './types'
 
 function createLanguage (input: Spec) {

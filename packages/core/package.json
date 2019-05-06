@@ -1,5 +1,5 @@
 {
-  "name": "@openci/core",
+  "name": "@oneci/core",
   "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@openci/adapter-common": "^0.0.0",
+    "@oneci/adapter-common": "^0.0.0",
     "ajv": "^6.10.0",
     "better-ajv-errors": "^0.6.4"
   }

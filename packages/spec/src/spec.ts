@@ -2,7 +2,7 @@ export type Spec = {
   /**
    * Docker image to use for this pipeline.
    */
-  image: Image;
+  image?: Image;
 
   /**
    * Execute these scripts for all jobs (before job specific scripts).

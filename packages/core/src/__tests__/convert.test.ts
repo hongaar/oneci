@@ -1,11 +1,13 @@
 import { convert } from '..'
-import { Adapter } from '@oneci/adapter-common'
+import { Adapter } from '@oneci/adapter-base'
 
-class TestAdapter extends Adapter {
-  convert (input: any) {
-    return {
-      destination: input.source
-    }
+type TestSpec = {
+  destination: boolean;
+}
+
+class TestAdapter extends Adapter<TestSpec> {
+  template = {
+    destination: (data: any) => data.source
   }
 }
 
@@ -17,5 +19,5 @@ it('should convert input with TestAdapter', () => {
     destination: true
   }
 
-  expect(convert(source, TestAdapter)).toEqual(destination)
+  expect(convert(source, new TestAdapter())).toEqual(destination)
 })

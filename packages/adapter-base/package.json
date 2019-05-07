@@ -1,5 +1,5 @@
 {
-  "name": "@oneci/adapter-common",
+  "name": "@oneci/adapter-base",
   "version": "0.0.0",
   "main": "lib/index.js",
   "license": "MIT",

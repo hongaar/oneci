@@ -1,9 +1,10 @@
 import { Command, flags } from '@oclif/command'
-import { validate, convert } from '@oneci/core'
+import { validate, convert, loadAdapter } from '@oneci/core'
 import getStdin = require('get-stdin')
 import { getFileContents } from '../common'
 import * as yaml from 'js-yaml'
 import * as fs from 'fs'
+import { Adapter } from '../../../adapter-base/lib'
 
 export default class Convert extends Command {
   static description = 'convert an oneci configuration'
@@ -69,7 +70,8 @@ $ echo "..." | oneci convert --target=travis --out=.travis.json
 
       validate(spec)
 
-      const output = convert(spec, flags.target)
+      const adapter = loadAdapter(flags.target)
+      const output = convert(spec, adapter)
 
       let formatted
       if (

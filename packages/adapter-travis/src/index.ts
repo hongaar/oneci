@@ -1,13 +1,25 @@
-import { Adapter } from '@oneci/adapter-common'
+import { Adapter, Template } from '@oneci/adapter-base'
 import { Spec, Script } from '@oneci/spec'
-import { TravisSpec } from './types'
+import { TravisSpec, Job } from './types'
 
-function createLanguage (input: Spec) {
+export class TravisAdapter extends Adapter<TravisSpec> {
+  public schemaUrl = 'http://json.schemastore.org/travis'
+  public template: Template<TravisSpec> = {
+    language: createLanguage,
+    node_js: createNodeJs,
+    stages: createStages,
+    jobs: {
+      include: createJobs
+    }
+  }
+}
+
+function createLanguage (input: Spec): Job['language'] {
   return 'node_js'
 }
 
 function createNodeJs (input: Spec) {
-  return '10'
+  return 10
 }
 
 function createStages (input: Spec) {
@@ -30,24 +42,9 @@ function createJobs (input: Spec) {
     return []
   }
 
-  return {
-    include: input.jobs.map(job => ({
-      name: job.name,
-      stage: job.group,
-      script: createScript(input, job.script)
-    }))
-  }
-}
-
-export default class TravisAdapter extends Adapter {
-  public schemaUrl = 'http://json.schemastore.org/travis'
-
-  convert (input: Spec) {
-    return {
-      language: createLanguage(input),
-      node_js: createNodeJs(input),
-      stages: createStages(input),
-      jobs: createJobs(input)
-    } as TravisSpec
-  }
+  return input.jobs.map(job => ({
+    name: job.name,
+    stage: job.group,
+    script: createScript(input, job.script)
+  }))
 }

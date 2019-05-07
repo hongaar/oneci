@@ -1,0 +1,1 @@
+# @oneci/adapter-base

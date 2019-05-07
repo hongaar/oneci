@@ -1,4 +1,4 @@
-import TravisAdapter from '..'
+import { TravisAdapter } from '..'
 // @ts-ignore
 import validConfig from './fixtures/valid.travis.json'
 // @ts-ignore
@@ -26,6 +26,6 @@ describe('validate method', () => {
 describe('convert method', () => {
   it('should return oneci config', async () => {
     const adapter = new TravisAdapter()
-    expect(adapter.convert(exampleOneciConfig)).toBe(exampleTravisConfig)
+    expect(adapter.convert(exampleOneciConfig)).toEqual(exampleTravisConfig)
   })
 })

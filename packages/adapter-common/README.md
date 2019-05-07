@@ -1,1 +1,0 @@
-# @oneci/adapter-common

@@ -7,11 +7,13 @@ jobs:
   include:
     - stage: test
       script:
+        - set -e
         - yarn
         - yarn build
         - yarn test
     - stage: publish
       script:
+        - set -e
         - yarn
         - yarn build
         - yarn publish

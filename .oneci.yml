@@ -1,6 +1,7 @@
 image: node:latest
 
 always:
+  - set -e
   - yarn
   - yarn build
 

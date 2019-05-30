@@ -1,6 +1,6 @@
 {
   "name": "@oneci/core",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
     "build:watch": "tsc --watch"
   },
   "dependencies": {
-    "@oneci/adapter-base": "^0.0.0",
+    "@oneci/adapter-base": "^1.0.0-alpha.0",
     "ajv": "^6.10.0",
     "better-ajv-errors": "^0.6.4"
   },

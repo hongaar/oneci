@@ -18,7 +18,7 @@ $ npm install -g @oneci/cli
 $ oneci COMMAND
 running command...
 $ oneci (-v|--version|version)
-@oneci/cli/0.0.0 win32-x64 node-v10.13.0
+@oneci/cli/1.0.0-alpha.0 win32-x64 node-v10.15.3
 $ oneci --help [COMMAND]
 USAGE
   $ oneci COMMAND
@@ -57,7 +57,7 @@ EXAMPLE
   $ echo "..." | oneci convert --target=travis --out=.travis.json
 ```
 
-_See code: [lib\commands\convert.js](https://github.com/exivity/oneci/blob/v0.0.0/lib\commands\convert.js)_
+_See code: [lib\commands\convert.js](https://github.com/exivity/oneci/blob/v1.0.0-alpha.0/lib\commands\convert.js)_
 
 ## `oneci help [COMMAND]`
 
@@ -97,5 +97,5 @@ EXAMPLE
   $ echo "..." | oneci validate
 ```
 
-_See code: [lib\commands\validate.js](https://github.com/exivity/oneci/blob/v0.0.0/lib\commands\validate.js)_
+_See code: [lib\commands\validate.js](https://github.com/exivity/oneci/blob/v1.0.0-alpha.0/lib\commands\validate.js)_
 <!-- commandsstop -->

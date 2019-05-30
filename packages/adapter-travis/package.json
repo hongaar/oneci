@@ -1,6 +1,6 @@
 {
   "name": "@oneci/adapter-travis",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -12,8 +12,8 @@
     "build:watch": "tsc --watch"
   },
   "dependencies": {
-    "@oneci/adapter-base": "^0.0.0",
-    "@oneci/spec": "^0.0.0"
+    "@oneci/adapter-base": "^1.0.0-alpha.0",
+    "@oneci/spec": "^1.0.0-alpha.0"
   },
   "publishConfig": {
     "access": "public"

@@ -9,8 +9,7 @@
     "test": "jest --coverage --passWithNoTests",
     "test:watch": "jest --watch",
     "build": "tsc",
-    "build:watch": "tsc --watch",
-    "release": "semantic-release"
+    "build:watch": "tsc --watch"
   },
   "dependencies": {
     "@oneci/adapter-base": "^0.0.0",

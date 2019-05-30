@@ -9,8 +9,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build": "tsc",
-    "build:watch": "tsc --watch",
-    "release": "semantic-release"
+    "build:watch": "tsc --watch"
   },
   "dependencies": {
     "@oneci/spec": "^0.0.0",

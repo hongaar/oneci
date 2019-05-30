@@ -7,8 +7,7 @@
     "build": "yarn build:ts && yarn build:schema",
     "build:ts": "tsc",
     "build:schema": "typescript-json-schema ./src/spec.ts Spec --required --strictNullChecks --noExtraProps --aliasRefs --out ./lib/spec.schema.json",
-    "build:watch": "tsc --watch",
-    "release": "semantic-release"
+    "build:watch": "tsc --watch"
   },
   "devDependencies": {
     "typescript-json-schema": "^0.37.0"

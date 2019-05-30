@@ -1,17 +1,18 @@
 language: node_js
-
-node_js: "10"
-
-cache: yarn
-
+node_js: 10
 stages:
   - test
-
-install: yarn
-
+  - publish
 jobs:
   include:
     - stage: test
       script:
+        - yarn
         - yarn build
         - yarn test
+    - stage: publish
+      script:
+        - yarn
+        - yarn build
+        - yarn publish
+

@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "@types/got": "^9.4.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

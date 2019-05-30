@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "typescript-json-schema": "^0.37.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

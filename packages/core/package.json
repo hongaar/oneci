@@ -16,5 +16,8 @@
     "@oneci/adapter-base": "^0.0.0",
     "ajv": "^6.10.0",
     "better-ajv-errors": "^0.6.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

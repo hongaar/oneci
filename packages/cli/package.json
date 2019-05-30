@@ -56,5 +56,8 @@
     "version": "oclif-dev readme && git add README.md",
     "release": "semantic-release"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }

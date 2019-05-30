@@ -5,11 +5,6 @@
 # node
 *.log*
 node_modules/
-coverage/
-
-# artefacts
-packages/*/lib/*
-!packages/*/lib/.gitignore
 
 # docusaurus
 lib/core/metadata.js

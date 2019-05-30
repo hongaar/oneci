@@ -9,6 +9,3 @@ jobs:
   - group: test
     script:
       - yarn test
-  - group: release
-    script:
-      - yarn release

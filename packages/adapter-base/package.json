@@ -2,6 +2,9 @@
   "name": "@oneci/adapter-base",
   "version": "1.0.0-alpha.0",
   "main": "lib/index.js",
+  "files": [
+    "lib/*"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "tslint 'src/**/*.ts'",
@@ -9,7 +12,8 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@oneci/spec": "^1.0.0-alpha.0",

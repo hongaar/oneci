@@ -2,7 +2,6 @@ language: node_js
 node_js: 10
 stages:
   - test
-  - release
 jobs:
   include:
     - stage: test
@@ -11,10 +10,4 @@ jobs:
         - yarn
         - yarn build
         - yarn test
-    - stage: release
-      script:
-        - set -e
-        - yarn
-        - yarn build
-        - yarn release
 

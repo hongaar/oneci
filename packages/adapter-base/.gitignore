@@ -5,6 +5,3 @@ node_modules/
 # artefacts
 coverage/
 lib/*
-
-# oclif
-oclif.manifest.json

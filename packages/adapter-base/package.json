@@ -1,6 +1,6 @@
 {
   "name": "@oneci/adapter-base",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "main": "lib/index.js",
   "files": [
     "lib/*"
@@ -16,7 +16,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@oneci/spec": "^1.0.0-alpha.0",
+    "@oneci/spec": "^1.0.0-alpha.1",
     "ajv": "^6.10.0",
     "got": "^9.6.0"
   },

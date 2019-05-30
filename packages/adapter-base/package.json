@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "prepublishOnly": "yarn build"
+    "release": "semantic-release"
   },
   "dependencies": {
     "@oneci/spec": "^0.0.0",

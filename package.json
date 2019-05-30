@@ -10,8 +10,7 @@
     "build:watch": "lerna run --parallel build:watch",
     "build:travis": "packages/cli/bin/run convert --target=travis > .travis.yml",
     "watch": "run-p build:watch test:watch",
-    "release": "lerna publish",
-    "semantic-release": "semantic-release"
+    "release": "lerna run release"
   },
   "workspaces": [
     "packages/*"

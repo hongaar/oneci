@@ -53,7 +53,8 @@
     "test:watch": "jest --watch",
     "build": "rimraf lib && tsc && oclif-dev manifest && oclif-dev readme",
     "build:watch": "tsc --watch",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "release": "semantic-release"
   },
   "types": "lib/index.d.ts"
 }

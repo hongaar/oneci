@@ -9,6 +9,6 @@ jobs:
   - group: test
     script:
       - yarn test
-  - group: publish
+  - group: release
     script:
-      - yarn publish
+      - yarn release

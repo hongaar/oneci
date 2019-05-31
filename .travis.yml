@@ -1,11 +1,9 @@
 language: node_js
 node_js: 10
-stages:
-  - test
+stages: []
 jobs:
   include:
-    - stage: test
-      script:
+    - script:
         - set -e
         - yarn
         - yarn build

@@ -18,7 +18,7 @@
   "dependencies": {
     "@oneci/spec": "^1.0.0-alpha.1",
     "ajv": "^6.10.0",
-    "got": "^9.6.0"
+    "got": "^11.8.5"
   },
   "devDependencies": {
     "@types/got": "^9.4.4"
